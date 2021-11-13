@@ -1,0 +1,95 @@
+.apresentation-container {
+  /* border: 1px solid red; */
+  background-image: url("../images/backgroundmiwa.jpg");
+  background-position: 80% 26%;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.apresentation-sub-container {
+  display: flex;
+  /* justify-content: center; */
+  /* border: 1px solid red; */
+  flex-direction: column;
+  margin-top: 50px;
+  width: 95%;
+}
+
+.apresentation-title {
+  /* border: 1px solid red; */
+  margin: 100px 0;
+  width: 70%;
+}
+
+.apresentation-title h1 {
+  color: #F6AE2D;
+  font-weight: 700;
+}
+
+.apresentation-text {
+  /* border: 1px solid red; */
+  /* margin: 50px 0; */
+  width: 70%;
+}
+
+.apresentation-text p {
+  font-size: calc(75% + 1.5vmin);
+  line-height: 1.8em;
+}
+
+.apresentation-icons-social {
+  width: 100%;
+  text-align: center;
+}
+
+.logos-sociais {
+  width: 7%;
+  height: 30%;
+}
+
+.apresentation-hour {
+  /* border: 1px solid red; */
+  text-align: center;
+  /* margin-top: 100px; */
+}
+
+.apresentation-thursday {
+  font-size: calc(70% + 1.5vmin);
+  font-weight: 700;
+}
+
+.apresentation-live {
+  color: #F6AE2D;
+  font-size: calc(75% + 1.2vmin);
+}
+
+@media screen and (max-width:768px) {
+  .apresentation-sub-container {
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .apresentation-title {
+    align-items: center;
+    /* border: 1px solid red; */
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .apresentation-title h1 {
+    text-align: center;
+  }
+
+  .apresentation-text {
+    width: 100%;
+  }
+
+  .apresentation-hour {
+    margin-top: 20px;
+  }
+}
