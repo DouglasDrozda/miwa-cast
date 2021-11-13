@@ -1,12 +1,12 @@
 import Header from "./components/Header";
+import Apresentation from "./components/Apresentation";
 
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <Header />
-      </nav>
+    <div>
+      <Header />
+      <Apresentation />
     </div>
   );
 }
