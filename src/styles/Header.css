@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #060606;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #F6AE2D;
+}
+
+.header-title {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ant-anchor {
+  display: flex;
+}
+
+.ant-anchor-link-title {
+  margin: 0 15px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+
+.ant-anchor-link-title:hover {
+  color: #F6AE2D;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.logos-sociais {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  color: #FFF;
+}
+
+.logos-sociais:hover {
+  color: #F6AE2D;
+  transition: 0.4s;
+}
+
+ @media screen and ( min-width: 768px) and (max-width: 1023px) {
+  .logos-sociais {
+    display: none;
+  }
+}
+
+@media screen  and ( min-width: 479px) and (max-width: 767px) {
+  .logos-sociais {
+    display: none;
+  }
+}
+
+@media ( max-width: 991px) {
+  .logos-sociais {
+    display: none;
+  }
+
+  .nav-link {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.664);
+  }
+  .navbar-brand img {
+    width: 200px;
+  }
+
+  .navbar-collapse {
+    justify-content:center;
+  }
+
+}
+
+@media screen and ( max-width: 479px) {
+  .logos-sociais {
+    display: none;
+  }
+
+  .navbar-collapse {
+    justify-content:center;
+  }
+
+}

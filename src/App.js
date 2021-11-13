@@ -1,10 +1,11 @@
+import Header from "./components/Header";
 
 
 function App() {
   return (
     <div className="App">
       <nav>
-        <h1>MiwaCast</h1>
+        <Header />
       </nav>
     </div>
   );
