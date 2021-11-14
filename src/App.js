@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Apresentation from "./components/Apresentation";
+import Podcast from "./components/Podcast";
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Header />
       <Apresentation />
+      <Podcast />
     </div>
   );
 }
