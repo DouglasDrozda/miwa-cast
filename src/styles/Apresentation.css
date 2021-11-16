@@ -2,10 +2,11 @@
   /* border: 1px solid red; */
   background-image: url("../images/backgroundmiwa.jpg");
   background-position: 80% 26%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   color: white;
   display: flex;
   justify-content: center;
+  /* width: 100vw; */
   position: relative;
 }
 
@@ -66,6 +67,17 @@
   font-size: calc(75% + 1.2vmin);
 }
 
+@media screen and (max-width: 1366px) {
+  .apresentation-icons-social {
+    height: 50px;
+  }
+
+  .logos-sociais {
+    width: 7%;
+    height: 50%;
+  }
+}
+
 @media screen and (max-width:768px) {
   .apresentation-sub-container {
     /* border: 1px solid red; */
@@ -92,4 +104,5 @@
   .apresentation-hour {
     margin-top: 20px;
   }
+
 }

@@ -1,20 +1,17 @@
 import React from "react";
-import '../styles/Podcast.css';
+import Header from "../components/Header";
 import podcasts from "../services/data";
 
-function Podcast() {
-  let number = 0;
-  let limit = 12;
 
+function Episodes() {
   return (
     <section className="podcast-container">
-      <div id="podcast" className="podcast-sub-container">
+      <Header />
+      <div className="podcast-sub-container">
         <h1>Convidados que passaram por aqui</h1>
         <div className="podcast-card-contain">
           {
             Object.values(podcasts).map((card) => {
-              number += 1
-              if (number <= limit) {
                 return (
                   <div className="podcast-card-sub-contain" key={card.id}>
                     <img src={card.image} alt="card.title" width="100%" />
@@ -30,17 +27,12 @@ function Podcast() {
                     </div>
                   </div>
                 )
-              }
-              return null;
             })
           }
-        </div>
-        <div className="podcast-buttons-container">
-          <a href="/episodios" className="button-page-episodes">VER MAIS...</a>
         </div>
       </div>
     </section>
   );
 }
 
-export default Podcast;
+export default Episodes;

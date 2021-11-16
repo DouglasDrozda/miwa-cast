@@ -1,15 +1,17 @@
-import Header from "./components/Header";
-import Apresentation from "./components/Apresentation";
-import Podcast from "./components/Podcast";
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import InitialPage from "./components/InitialPage";
+import Episodes from "./pages/episodes";
 
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Apresentation />
-      <Podcast />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<InitialPage />} />
+        <Route path="/episodios" element={<Episodes />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

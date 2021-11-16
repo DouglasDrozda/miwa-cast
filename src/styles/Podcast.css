@@ -4,6 +4,7 @@
   color: #fff;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 .podcast-sub-container {
@@ -23,7 +24,8 @@
 
 .podcast-card-sub-contain {
   background-color: #fff;
-  /* border: 3px solid red; */
+  border-radius: 7px;
+  box-shadow: 7px 5px 5px rgba(0, 0, 0, 0.63);
   width: 350px;
   padding: 10px;
   margin: 20px 30px;
@@ -46,7 +48,7 @@
   font-size: calc(75% + 0.6vmin);
   text-align: justify;
   height: 200px;
-  /* margin-top: 30px; */
+  margin-top: 30px;
 }
 
 .podcast-buttons-container {
@@ -72,4 +74,31 @@
 .podcast-buttons:hover {
   color: black;
   background-color: #f7b741;
+}
+
+.button-page {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  width: 100%;
+  
+}
+
+.button-page-episodes {
+  background-color: inherit;
+  border: 1px solid #F6AE2D;
+  border-radius: 8px;
+  color: #F6AE2D;
+  font-weight: 700;
+  width: 250px;
+  text-decoration: none;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.button-page-episodes:hover {
+  color: #F6AE2D;
+  transition: 0.4s;
+  transform: scale(1.1);
 }

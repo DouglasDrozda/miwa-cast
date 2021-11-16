@@ -2,15 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 .navbar {
-  background-color: #060606;
+  background-color: inherit;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   position: fixed;
   z-index: 1;
+}
+
+.header-scroll {
+  background-color: #060606;
+  transition: all 1s;
 }
 
 .container {
