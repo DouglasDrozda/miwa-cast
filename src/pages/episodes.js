@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SearchInput from "../components/SearchInput";
 import MyContext from '../context/index';
@@ -12,16 +13,16 @@ function Episodes() {
       <div className="podcast-sub-container">
         <div className="episodes-search">
           {/* <h1>Convidados que passaram por aqui</h1> */}
-            <SearchInput />
+          <SearchInput />
           <div>
           </div>
         </div>
         <div className="podcast-card-contain">
           {
             getPodcast().length > 0 ?
-            Object.values(getPodcast()).map((card) => {
-              return (
-                <div className="podcast-card-sub-contain" key={card.id}>
+              Object.values(getPodcast()).map((card) => {
+                return (
+                  <div className="podcast-card-sub-contain" key={card.id}>
                     <img src={card.image} alt="card.title" width="100%" />
                     <div className="podcast-title">
                       <h4>{card.title}</h4>
@@ -35,9 +36,10 @@ function Episodes() {
                     </div>
                   </div>
                 )
-            })
-            : <h4>Ops, nenhum podcast encontrado com esse nome 😥</h4> }
+              })
+              : <h4>Ops, nenhum podcast encontrado com esse nome 😥</h4>}
         </div>
+        <Footer />
       </div>
     </section>
   );

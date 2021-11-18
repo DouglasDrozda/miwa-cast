@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Apresentation from "./Apresentation";
 import Podcast from './Podcast';
+import Footer from "./Footer";
 
 
 function InitialPage() {
@@ -10,6 +11,7 @@ function InitialPage() {
       <Header />
       <Apresentation />
       <Podcast />
+      <Footer />
     </div>
   )
 }
