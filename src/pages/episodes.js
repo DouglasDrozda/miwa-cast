@@ -39,7 +39,7 @@ function Episodes() {
               })
               : <h4>Ops, nenhum podcast encontrado com esse nome 😥</h4>}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </section>
   );
