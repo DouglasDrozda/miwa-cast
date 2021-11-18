@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "../components/Header";
-import podcasts from "../services/data";
+import SearchInput from "../components/SearchInput";
+import MyContext from '../context/index';
 
 
 function Episodes() {
+  const { getPodcast } = useContext(MyContext);
   return (
     <section className="podcast-container">
       <Header />
       <div className="podcast-sub-container">
-        <h1>Convidados que passaram por aqui</h1>
+        <div className="episodes-search">
+          {/* <h1>Convidados que passaram por aqui</h1> */}
+            <SearchInput />
+          <div>
+          </div>
+        </div>
         <div className="podcast-card-contain">
           {
-            Object.values(podcasts).map((card) => {
-                return (
-                  <div className="podcast-card-sub-contain" key={card.id}>
+            getPodcast().length > 0 ?
+            Object.values(getPodcast()).map((card) => {
+              return (
+                <div className="podcast-card-sub-contain" key={card.id}>
                     <img src={card.image} alt="card.title" width="100%" />
                     <div className="podcast-title">
                       <h4>{card.title}</h4>
@@ -28,7 +36,7 @@ function Episodes() {
                   </div>
                 )
             })
-          }
+            : <h4>Ops, nenhum podcast encontrado com esse nome 😥</h4> }
         </div>
       </div>
     </section>
