@@ -1,10 +1,19 @@
 const podcasts = {
+
+  card20: {
+    id: 20,
+    image: 'https://i.ytimg.com/vi/XCTwXR6r_70/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD74FNviGHbQPD0tteG-Zt-QOL0mg',
+    title: 'Augusto e Parafina (Surf Dog) - Miwa Cast #20',
+    description: 'Cachorrada está na área, a maior celebridade da BAIXADA SANTISTA veio ao nosso programa para bater um papo sobre como foi essa união entre humano e cachorro e também sobre o sucesso no SURF DOG!!!',
+    youtube: 'https://www.youtube.com/watch?v=XCTwXR6r_70&t=620s',
+    spotify: 'https://open.spotify.com/episode/0Q2TLmJ7wtlmNjgczYow8L',
+  },
   
   card19: {
     id: 19,
     image: 'https://i.ytimg.com/vi/6BhAWF_jncc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPsSATNoxkU9cD9M1ZbY2S5UT2Nw',
     title: 'Kakolu - Miwa Cast #19',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy',
+    description: 'Papo com a galera da Kakolu, escola de surf e funcional aqui do POSTO 2 que realiza diversos trabalhos voltados para a prática do surf.',
     youtube: 'https://www.youtube.com/watch?v=6BhAWF_jncc',
     spotify: 'https://open.spotify.com/show/4i7myM2dBJMz60uVXLlPGg',
   },
