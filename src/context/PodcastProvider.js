@@ -44,7 +44,7 @@ function PodcastProvider({children}) {
   },[])
 
   const getPodcast = () => {
-    const resultInput = apiEps.filter((card) => card.title.toLowerCase().includes(search.toLowerCase()));
+    const resultInput = apiEps.filter((card) => card.snippet.title.toLowerCase().includes(search.toLowerCase()));
     return resultInput;
   }
 

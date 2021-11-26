@@ -6,7 +6,7 @@ import MyContext from '../context/index';
 
 
 function Episodes() {
-  const { loading, apiEps } = useContext(MyContext);
+  const { loading, getPodcast } = useContext(MyContext);
   // console.log(loading, apiEps);
   return (
     <section className="podcast-container">
@@ -18,7 +18,7 @@ function Episodes() {
           </div>
         </div>
         <div className="podcast-card-contain">
-          {loading === true ? <Loading /> : apiEps.map(({ id: { videoId }, snippet: { thumbnails, title, channelTitle, description } }) => (
+          {loading === true ? <Loading /> : getPodcast().map(({ id: { videoId }, snippet: { thumbnails, title, channelTitle, description } }) => (
             <div className="podcast-card-sub-contain" key={videoId}>
               <img src={thumbnails.high.url} alt={channelTitle} width="100%" />
               <div className="podcast-title">
