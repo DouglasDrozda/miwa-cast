@@ -6,7 +6,7 @@ import MyContext from '../context/index';
 
 
 function Episodes() {
-  const { setMaxResults, loading, apiEps } = useContext(MyContext);
+  const { loading, apiEps } = useContext(MyContext);
   // console.log(loading, apiEps);
   return (
     <section className="podcast-container">

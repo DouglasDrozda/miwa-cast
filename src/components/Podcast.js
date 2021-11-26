@@ -1,11 +1,11 @@
 import React from "react";
 import '../styles/Podcast.css';
-import podcasts from "../services/data";
+// import podcasts from "../services/data";
 import Youtube from "./Youtube";
 
 function Podcast() {
-  let number = 0;
-  let limit = 12;
+  // let number = 0;
+  // let limit = 12;
 
   return (
     <section className="podcast-container">
