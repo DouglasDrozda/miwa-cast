@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/Podcast.css';
 import podcasts from "../services/data";
+import Youtube from "./Youtube";
 
 function Podcast() {
   let number = 0;
@@ -11,7 +12,7 @@ function Podcast() {
       <div id="podcast" className="podcast-sub-container">
         <h1>Convidados que passaram por aqui</h1>
         <div className="podcast-card-contain">
-          {
+          {/* {
             Object.values(podcasts).map((card) => {
               number += 1
               if (number <= limit) {
@@ -33,8 +34,9 @@ function Podcast() {
               }
               return null;
             })
-          }
+          } */}
         </div>
+        <Youtube />
         <div className="podcast-buttons-container">
           <a href="/episodios" className="button-page-episodes">VER MAIS...</a>
         </div>
