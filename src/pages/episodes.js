@@ -7,7 +7,7 @@ import MyContext from '../context/index';
 
 function Episodes() {
   const { loading, getPodcast } = useContext(MyContext);
-  // console.log(loading, apiEps);
+
   return (
     <section className="podcast-container">
       <Header />
@@ -33,6 +33,7 @@ function Episodes() {
               </div>
             </div>
           ))}
+          {getPodcast().length === 0 ? (<h4>Ops, nenhum podcast encontrado com esse nome 😥</h4>) : null }
         </div>
       </div>
     </section>
@@ -40,6 +41,3 @@ function Episodes() {
 }
 
 export default Episodes;
-
-
-// : <h4>Ops, nenhum podcast encontrado com esse nome 😥</h4>

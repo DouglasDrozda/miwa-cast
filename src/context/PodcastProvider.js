@@ -7,7 +7,7 @@ function PodcastProvider({children}) {
   const [api, setApi] = useState();
   const [apiEps, setApiEps] = useState();
   const [loading, setLoading] = useState(true);
-  const [maxResults, setMaxResults] = useState(9);
+  const [maxResults, setMaxResults] = useState(200);
   const [inputSearch, setInputSearch] = useState({
     search: '',
   });
@@ -17,7 +17,9 @@ function PodcastProvider({children}) {
   
   // TESTANDO API YOUTUBE
   const fetchAPI = async () => {
-    const apiKey = 'AIzaSyD0RJ1lLDFbKLwcbwWEF4DSMhs66K9fs5I';
+    const apiKey = 'AIzaSyBGdxRVYAOJ-tEilrfkHITYYMF8YPv0two';
+    // const apiKey = 'AIzaSyD0RJ1lLDFbKLwcbwWEF4DSMhs66K9fs5I';
+
     const idChannel = 'UCJUxZPUsAvX_jFZNYAST0yg'
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video&channelId=${idChannel}&maxResults=12&order=date`
     const fetchApi  = await fetch(url);
@@ -27,7 +29,7 @@ function PodcastProvider({children}) {
   }
 
   const fetchEps = async () => {
-    const apiKey = 'AIzaSyDSv3tTJWwenmMLuC7fVrIVl0PvVzvIiJw';
+    const apiKey = 'AIzaSyBGdxRVYAOJ-tEilrfkHITYYMF8YPv0two';
     const idChannel = 'UCJUxZPUsAvX_jFZNYAST0yg'
     const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video&channelId=${idChannel}&maxResults=${maxResults}&order=date`
     const fetchApi  = await fetch(url);
@@ -40,7 +42,7 @@ function PodcastProvider({children}) {
     setTimeout(() => {
       fetchAPI();
       fetchEps();
-    }, 2000)
+    }, 1500)
   },[])
 
   const getPodcast = () => {
