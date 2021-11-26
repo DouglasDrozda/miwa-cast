@@ -37,8 +37,10 @@ function PodcastProvider({children}) {
   }
   
   useEffect(() => {
-    fetchAPI();
-    fetchEps();
+    setTimeout(() => {
+      fetchAPI();
+      fetchEps();
+    }, 2000)
   },[])
 
   const getPodcast = () => {
