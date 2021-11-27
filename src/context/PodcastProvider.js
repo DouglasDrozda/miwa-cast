@@ -7,7 +7,7 @@ function PodcastProvider({children}) {
   const [api, setApi] = useState([]);
   const [apiEps, setApiEps] = useState();
   const [loading, setLoading] = useState(true);
-  const [maxResults, setMaxResults] = useState(20);
+  const [videoCount, setVideoCount] = useState(12);
   const [inputSearch, setInputSearch] = useState({
     search: '',
   });
@@ -17,41 +17,46 @@ function PodcastProvider({children}) {
   
   // TESTANDO API YOUTUBE
   const fetchAPI = async () => {
-    const apiKey = 'AIzaSyBGdxRVYAOJ-tEilrfkHITYYMF8YPv0two';
-    // const apiKey = 'AIzaSyD0RJ1lLDFbKLwcbwWEF4DSMhs66K9fs5I';
+    // const apiKey = 'AIzaSyBGdxRVYAOJ-tEilrfkHITYYMF8YPv0two';
+    const apiKey = 'AIzaSyD0RJ1lLDFbKLwcbwWEF4DSMhs66K9fs5I';
 
     const idChannel = 'UCJUxZPUsAvX_jFZNYAST0yg'
-    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video&channelId=${idChannel}&maxResults=12&order=date`
+    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video&channelId=${idChannel}&maxResults=${videoCount}&order=date`
     const fetchApi  = await fetch(url);
     const data = await fetchApi.json();
     setApi(data.items);
     setLoading(false);
   }
 
-  const fetchEps = async () => {
-    const API_KEY = 'AIzaSyC727DPAuoxAwd9vlZQlW_gmUjKjQBGeks';
-    const idChannel = 'UCJUxZPUsAvX_jFZNYAST0yg'
-    const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&part=snippet&type=video&channelId=${idChannel}&maxResults=${maxResults}&order=date`
-    const fetchApi  = await fetch(url);
-    const data = await fetchApi.json();
-    setApiEps(data.items);
-    setLoading(false);
-  }
+  // const fetchEps = async (nextPageToken) => {
+  //   const API_KEY = 'AIzaSyC727DPAuoxAwd9vlZQlW_gmUjKjQBGeks';
+  //   // const API_KEY = 'AIzaSyD0RJ1lLDFbKLwcbwWEF4DSMhs66K9fs5I';
+
+  //   const idChannel = 'UCJUxZPUsAvX_jFZNYAST0yg'
+  //   const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&part=snippet&type=video&channelId=${idChannel}&maxResults=${maxResults}&pageToken=${nextPageToken}&order=date`
+  //   const fetchApi  = await fetch(url);
+  //   const data = await fetchApi.json();
+  //   setApiEps(data.items);
+  //   setLoading(false);
+  // }
   
   useEffect(() => {
     setTimeout(() => {
       fetchAPI();
-      fetchEps();
     }, 1500)
   },[])
-
+  
+  // useEffect(() => {
+  //   fetchEps();
+  // },[])
+  
   const getPodcast = () => {
-    const resultInput = apiEps.filter((card) => card.snippet.title.toLowerCase().includes(search.toLowerCase()));
+    const resultInput = api.filter((card) => card.snippet.title.toLowerCase().includes(search.toLowerCase()));
     return resultInput;
   }
 
     return (
-      <MyContext.Provider value={{data, setData, inputSearch, setInputSearch, api, loading, apiEps, setMaxResults, getPodcast}}>
+      <MyContext.Provider value={{data, setData, inputSearch, setInputSearch, api, loading, apiEps, getPodcast, setVideoCount}}>
         {children}
       </MyContext.Provider>
   );

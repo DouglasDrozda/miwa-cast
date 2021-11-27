@@ -7,7 +7,7 @@ import MyContext from '../context/index';
 
 function Episodes() {
   const { loading, getPodcast } = useContext(MyContext);
-  console.log(getPodcast);
+
   return (
     <section className="podcast-container">
       <Header />
@@ -33,7 +33,10 @@ function Episodes() {
               </div>
             </div>
           ))}
-          {/* {getPodcast().length === 0 ? (<h4>Ops, nenhum podcast encontrado com esse nome 😥</h4>) : null } */}
+          {getPodcast().length === 0 && !loading ? (<h4>Ops, nenhum podcast encontrado com esse nome 😥</h4>) : null}
+        </div>
+        <div className="podcast-buttons-container">
+          <button className="button-page-episodes">CARREGAR MAIS...</button>
         </div>
       </div>
     </section>

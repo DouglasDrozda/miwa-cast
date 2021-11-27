@@ -8,7 +8,7 @@ function Youtube() {
 
   return (
     <section className="podcast-card-contain">
-      {loading === true ? <Loading /> : api.map(({ id:{videoId}, snippet: { thumbnails, title, channelTitle, description } }) => (
+      {loading === true ? <Loading /> : api.map(({ id: { videoId }, snippet: { thumbnails, publishedAt, title, channelTitle, description } }) => (
         <div className="podcast-card-sub-contain" key={videoId}>
           <img src={thumbnails.high.url} alt={channelTitle} width="100%" />
           <div className="podcast-title">
