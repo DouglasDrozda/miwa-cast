@@ -4,10 +4,10 @@ import podcasts from '../services/data';
 
 function PodcastProvider({children}) {
   const [data, setData] = useState(podcasts);
-  const [api, setApi] = useState();
+  const [api, setApi] = useState([]);
   const [apiEps, setApiEps] = useState();
   const [loading, setLoading] = useState(true);
-  const [maxResults, setMaxResults] = useState(200);
+  const [maxResults, setMaxResults] = useState(20);
   const [inputSearch, setInputSearch] = useState({
     search: '',
   });
@@ -29,9 +29,9 @@ function PodcastProvider({children}) {
   }
 
   const fetchEps = async () => {
-    const apiKey = 'AIzaSyBGdxRVYAOJ-tEilrfkHITYYMF8YPv0two';
+    const API_KEY = 'AIzaSyC727DPAuoxAwd9vlZQlW_gmUjKjQBGeks';
     const idChannel = 'UCJUxZPUsAvX_jFZNYAST0yg'
-    const url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video&channelId=${idChannel}&maxResults=${maxResults}&order=date`
+    const url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&part=snippet&type=video&channelId=${idChannel}&maxResults=${maxResults}&order=date`
     const fetchApi  = await fetch(url);
     const data = await fetchApi.json();
     setApiEps(data.items);

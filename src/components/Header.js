@@ -12,10 +12,10 @@ function Header() {
     })
   }
 
-  // window.addEventListener('scroll', () => {
-  //   const header = document.querySelector('.navbar')
-  //   header.classList.toggle('header-scroll', window.scrollY > 0)
-  // })
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.navbar')
+    header.classList.toggle('header-scroll', window.scrollY > 0)
+  })
 
   return (
     <Navbar variant="dark" expand="lg">
