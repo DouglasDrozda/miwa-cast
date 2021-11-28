@@ -6,9 +6,11 @@ import Loading from "./Loading";
 function Youtube() {
   const { api, loading } = useContext(MyContext);
 
+  const result = api.slice(0,12)
+
   return (
     <section className="podcast-card-contain">
-      {loading === true ? <Loading /> : api.map(({ id: { videoId }, snippet: { thumbnails, publishedAt, title, channelTitle, description } }) => (
+      {loading === true ? <Loading /> : result.map(({ id: { videoId }, snippet: { thumbnails, title, channelTitle, description } }) => (
         <div className="podcast-card-sub-contain" key={videoId}>
           <img src={thumbnails.high.url} alt={channelTitle} width="100%" />
           <div className="podcast-title">
