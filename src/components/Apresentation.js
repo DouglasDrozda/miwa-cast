@@ -32,7 +32,7 @@ function Apresentation() {
           </a>
         </div>
         <div className="apresentation-hour">
-          <p className="apresentation-thursday">TODA QUINTA ÀS 19:30H</p>
+          <p className="apresentation-thursday">TODA SEGUNDA ÀS 20:00H</p>
           <p className="apresentation-live">Ao vivo no Youtube</p>
         </div>
       </div>
