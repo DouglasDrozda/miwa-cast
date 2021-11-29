@@ -43,10 +43,10 @@
   margin-top: 20px;
 }
 
-.podcast-title p {
+.podcast-description p {
   /* border: 1px solid red; */
   font-size: calc(75% + 0.6vmin);
-  text-align: justify;
+  text-align: left;
   height: 170px;
   width: 100%;
   margin-top: 30px;
@@ -55,7 +55,7 @@
 .podcast-buttons-container {
   align-items:center;
   display: flex;
-  height: 100px;
+  height: 100%;
   justify-content:center;
   width: 100%;
   flex-direction: column;
@@ -78,12 +78,30 @@
 }
 
 .button-page {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   width: 100%;
   height: 100px;
   margin-top: 20px;
   width: 100%;
-  
+}
+
+#youtube:hover {
+  background-color: #C4302B;
+  color: white;
+}
+
+#spotify:hover {
+  background-color:#81B71A;
+  color: white;
+}
+
+#twitch:hover {
+  background-color: #9147FF;
+  color: white;
+}
+
+.logos {
+  margin: 0 10px;
 }
 
 .button-page-episodes {
@@ -94,7 +112,7 @@
   font-weight: 700;
   width: 250px;
   text-decoration: none;
-  margin: 5px 0;
+  margin: 25px 0;
   padding: 5px;
 }
 
