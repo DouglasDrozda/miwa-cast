@@ -96,6 +96,10 @@
     justify-content:center;
   }
 
+  .navbar {
+    background-color: #060606;
+  }
+
 }
 
 @media screen and ( max-width: 479px) {
